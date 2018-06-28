@@ -1,5 +1,5 @@
 <?php 
-if($_GET('lang') == 'EN'){
+if($_GET['lang'] == 'EN'){
   require(dirname(__FILE__).'/translate/EN.php');
 } else {
   require(dirname(__FILE__).'/translate/CN.php');
