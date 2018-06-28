@@ -1,5 +1,5 @@
-<?php define('LANG', require(dirname(__FILE__).'\translate\CN.php'));
-      define('VARS', require(dirname(__FILE__).'\translate\vars.php'));
+<?php define('LANG', require(dirname(__FILE__).'/translate/EN.php'));
+      define('VARS', require(dirname(__FILE__).'/translate/vars.php'));
 ?>
 
 <!DOCTYPE html>
