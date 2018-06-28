@@ -1,0 +1,48 @@
+.nearbyBlock {
+  margin-top: 5%;
+  line-height: 90%;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: #3c579e;
+  padding-bottom: 3%;
+}
+
+.nearbyBlock .first-dash {
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 13px 13px -12px #939393;
+}
+
+.nearbyBlock .title {
+  color: #3c579e;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 3%;
+  margin-bottom: 0%;
+  margin-left: 4%;
+}
+
+.nearbyBlock .normal-dash {
+  margin-top: 5%;
+  border: 0;
+  height: 3px;
+  background-image: linear-gradient(to right, transparent, rgba(147, 147, 147, 0.85), transparent);
+}
+
+.nearbyBlock .nearby {
+  border-style: none;
+  margin-left: 5%;
+  line-height: 30%;
+  margin-bottom: 0%;
+}
+
+.nearbyBlock .nearby .nearby-name {
+  font-size: 13px;
+  font-weight: 800;
+  color: #7e7e7e;
+}
+
+.nearbyBlock .nearby .nearby-address {
+  color: #a8a8a8;
+  font-size: 13px;
+}
