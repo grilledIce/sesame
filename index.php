@@ -1,4 +1,4 @@
-<?php require(dirname(__FILE__).'/translate/CN.php');
+<?php require(dirname(__FILE__).'/translate/EN.php');
 require(dirname(__FILE__).'/translate/vars.php');
 ?>
 
