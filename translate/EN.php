@@ -1,6 +1,6 @@
 <?php
 
-  return
+  $lang=
   [
     // SCHOOL
     'school-title' => 'SCHOOL',

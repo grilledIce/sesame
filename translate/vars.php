@@ -1,6 +1,6 @@
 <?php
   //可变信息（学校名称, 排名，年级，地址，距离）
-  return [
+  $vars =  [
     'school-name-1' => 'first school',
     'school-rank-1' => '1',
     'school-grade-1' => '1',

@@ -1,5 +1,5 @@
-<?php define('LANG', require(dirname(__FILE__).'/translate/CN.php'));
-define('VARS', require(dirname(__FILE__).'/translate/vars.php'));
+<?php require(dirname(__FILE__).'/translate/CN.php');
+require(dirname(__FILE__).'/translate/vars.php');
 ?>
 
 <!DOCTYPE html>
@@ -38,111 +38,111 @@ define('VARS', require(dirname(__FILE__).'/translate/vars.php'));
     </div>
     <div class="schoolBlock">
         <p class="title">
-          <i class="fas fa-school"></i> <?php echo LANG['school-title'] ?>
+          <i class="fas fa-school"></i> <?php echo $lang['school-title'] ?>
         </p>
       <hr class="first-dash">
       <div class="school">
         <div class="nameBlock">
           <p class="school-name">
-          <i class="fas fa-graduation-cap"></i> <?php echo VARS['school-name-1'] ?>
+          <i class="fas fa-graduation-cap"></i> <?php echo $var['school-name-1'] ?>
           </p>
           <div class="bubbles">
             <div class="property">
-            <?php echo LANG['school-property-1'] ?>
+            <?php echo $lang['school-property-1'] ?>
             </div>
             <div class="rank">
-            <?php echo VARS['school-rank-1'] ?>
+            <?php echo $vars['school-rank-1'] ?>
             </div>
           </div>
         </div>
         <div class="school-info">
-          <p><?php echo VARS['school-grade-1'] ?></p>
-          <p><?php echo VARS['school-address-1'] ?></p>
-          <p><?php echo VARS['school-distance-1'] ?></p>
+          <p><?php echo $vars['school-grade-1'] ?></p>
+          <p><?php echo $vars['school-address-1'] ?></p>
+          <p><?php echo $vars['school-distance-1'] ?></p>
         </div>
       </div>
       <hr class="normal-dash">
       <div class="school">
         <div class="nameBlock">
           <p class="school-name">
-            <i class="fas fa-graduation-cap"></i> <?php echo VARS['school-name-2'] ?>
+            <i class="fas fa-graduation-cap"></i> <?php echo $vars['school-name-2'] ?>
           </p>
           <div class="bubbles">
             <div class="property">
-            <?php echo LANG['school-property-2'] ?>
+            <?php echo $lang['school-property-2'] ?>
             </div>
             <div class="rank">
-            <?php echo VARS['school-rank-2'] ?>
+            <?php echo $vars['school-rank-2'] ?>
             </div>
           </div>
         </div>
         <div class="school-info">
-          <p><?php echo VARS['school-grade-2'] ?></p>
-          <p><?php echo VARS['school-address-2'] ?></p>
-          <p><?php echo VARS['school-distance-2'] ?></p>
+          <p><?php echo $vars['school-grade-2'] ?></p>
+          <p><?php echo $vars['school-address-2'] ?></p>
+          <p><?php echo $vars['school-distance-2'] ?></p>
         </div>
       </div>
       <hr class="normal-dash">
       <div class="school">
         <div class="nameBlock">
           <p class="school-name">
-            <i class="fas fa-graduation-cap"></i> <?php echo VARS['school-name-3'] ?>
+            <i class="fas fa-graduation-cap"></i> <?php echo $vars['school-name-3'] ?>
           </p>
           <div class="bubbles">
             <div class="property">
-            <?php echo LANG['school-property-3'] ?>
+            <?php echo $lang['school-property-3'] ?>
             </div>
             <div class="rank">
-            <?php echo VARS['school-rank-3'] ?>
+            <?php echo $vars['school-rank-3'] ?>
             </div>
           </div>
         </div>
         <div class="school-info">
-          <p><?php echo VARS['school-grade-3'] ?></p>
-          <p><?php echo VARS['school-address-3'] ?></p>
-          <p><?php echo VARS['school-distance-3'] ?></p>
+          <p><?php echo $vars['school-grade-3'] ?></p>
+          <p><?php echo $vars['school-address-3'] ?></p>
+          <p><?php echo $vars['school-distance-3'] ?></p>
         </div>
       </div>
       <hr class="normal-dash">
       <div class="school">
         <div class="nameBlock">
           <p class="school-name">
-            <i class="fas fa-graduation-cap"></i> <?php echo VARS['school-name-4'] ?>
+            <i class="fas fa-graduation-cap"></i> <?php echo $vars['school-name-4'] ?>
           </p>
           <div class="bubbles">
             <div class="property">
-            <?php echo LANG['school-property-4'] ?>
+            <?php echo $lang['school-property-4'] ?>
             </div>
             <div class="rank">
-            <?php echo VARS['school-rank-4'] ?>
+            <?php echo $vars['school-rank-4'] ?>
             </div>
           </div>
         </div>
         <div class="school-info">
-          <p><?php echo VARS['school-grade-4'] ?></p>
-          <p><?php echo VARS['school-address-4'] ?></p>
-          <p><?php echo VARS['school-distance-4'] ?></p>
+          <p><?php echo $vars['school-grade-4'] ?></p>
+          <p><?php echo $vars['school-address-4'] ?></p>
+          <p><?php echo $vars['school-distance-4'] ?></p>
         </div>
       </div>
       <hr class="normal-dash">
       <div class="school">
         <div class="nameBlock">
           <p class="school-name">
-            <i class="fas fa-graduation-cap"></i> <?php echo VARS['school-name-5'] ?>
+            <i class="fas fa-graduation-cap"></i> <?php echo $vars['school-name-5'] ?>
           </p>
           <div class="bubbles">
             <div class="property">
-            <?php echo LANG['school-property-5'] ?>
+            <?php echo $lang['school-property-5'] ?>
             </div>
             <div class="rank">
-            <?php echo VARS['school-rank-5'] ?>
+            <?php echo $vars['school-rank-5'] ?>
             </div>
           </div>
         </div>
         <div class="school-info">
-          <p><?php echo VARS['school-grade-5'] ?></p>
-          <p><?php echo VARS['school-address-5'] ?></p>
-          <p><?php echo VARS['school-distance-5'] ?></p>
+          <p><?php echo $vars['school-grade-5'] ?></p>
+          <p><?php echo $vars['school-address-5'] ?></p>
+          <p><?php echo $vars['school-distance-5'] ?></p>
         </div>
       </div>
     </div>
@@ -150,51 +150,51 @@ define('VARS', require(dirname(__FILE__).'/translate/vars.php'));
     <!-- TRANSIT -->
     <div class="transitBlock">
       <p class="title">
-        <i class="fas fa-subway"></i> <?php echo LANG['transit-title']; ?>
+        <i class="fas fa-subway"></i> <?php echo $lang['transit-title']; ?>
       </p>
       <hr class="first-dash">
       <div class="transit">
         <p class="transit-name">
-          <?php echo VARS['typeOfTransit-1']?> <?php echo VARS['transit-name-1']; ?>
+          <?php echo $vars['typeOfTransit-1']?> <?php echo $vars['transit-name-1']; ?>
         </p>
         <p class="transit-distance">
-          <?php echo VARS['transit-distance-1']; ?>
+          <?php echo $vars['transit-distance-1']; ?>
         </p>
       </div>
       <hr class="normal-dash">
       <div class="transit">
         <p class="transit-name">
-          <?php echo VARS['typeOfTransit-2']?> <?php echo VARS['transit-name-2']; ?>
+          <?php echo $vars['typeOfTransit-2']?> <?php echo $vars['transit-name-2']; ?>
         </p>
         <p class="transit-distance">
-          <?php echo VARS['transit-distance-2']; ?>
+          <?php echo $vars['transit-distance-2']; ?>
         </p>
       </div>
       <hr class="normal-dash">
       <div class="transit">
         <p class="transit-name">
-          <?php echo VARS['typeOfTransit-3']?> <?php echo VARS['transit-name-3']; ?>
+          <?php echo $vars['typeOfTransit-3']?> <?php echo $vars['transit-name-3']; ?>
         </p>
         <p class="transit-distance">
-          <?php echo VARS['transit-distance-3']; ?>
+          <?php echo $vars['transit-distance-3']; ?>
         </p>
       </div>
       <hr class="normal-dash">
       <div class="transit">
         <p class="transit-name">
-          <?php echo VARS['typeOfTransit-4']?> <?php echo VARS['transit-name-4']; ?>
+          <?php echo $vars['typeOfTransit-4']?> <?php echo $vars['transit-name-4']; ?>
         </p>
         <p class="transit-distance">
-          <?php echo VARS['transit-distance-4']; ?>
+          <?php echo $vars['transit-distance-4']; ?>
         </p>
       </div>
       <hr class="normal-dash">
       <div class="transit">
         <p class="transit-name">
-          <?php echo VARS['typeOfTransit-5']?> <?php echo VARS['transit-name-5']; ?>
+          <?php echo $vars['typeOfTransit-5']?> <?php echo $vars['transit-name-5']; ?>
         </p>
         <p class="transit-distance">
-          <?php echo VARS['transit-distance-5']; ?>
+          <?php echo $vars['transit-distance-5']; ?>
         </p>
       </div>
     </div>
@@ -202,51 +202,51 @@ define('VARS', require(dirname(__FILE__).'/translate/vars.php'));
     <!-- NEARBY -->
     <div class="nearbyBlock">
       <p class="title">
-        <i class="fas fa-thumbs-up"></i> <?php echo LANG['nearby-title']; ?>
+        <i class="fas fa-thumbs-up"></i> <?php echo $lang['nearby-title']; ?>
       </p>
       <hr class="first-dash">
       <div class="nearby">
         <p class="nearby-name">
-          <?php echo VARS['typeOfNearby-1']; ?> <?php echo VARS['nearby-name-1']; ?>
+          <?php echo $vars['typeOfNearby-1']; ?> <?php echo $vars['nearby-name-1']; ?>
         </p>
         <p class="nearby-address">
-          <?php echo VARS['nearby-address-1']; ?>
+          <?php echo $vars['nearby-address-1']; ?>
         </p>
       </div>
       <hr class="normal-dash">
       <div class="nearby">
         <p class="nearby-name">
-          <?php echo VARS['typeOfNearby-2']; ?> <?php echo VARS['nearby-name-2']; ?>
+          <?php echo $vars['typeOfNearby-2']; ?> <?php echo $vars['nearby-name-2']; ?>
         </p>
         <p class="nearby-address">
-          <?php echo VARS['nearby-address-2']; ?>
+          <?php echo $vars['nearby-address-2']; ?>
         </p>
       </div>
       <hr class="normal-dash">
       <div class="nearby">
         <p class="nearby-name">
-          <?php echo VARS['typeOfNearby-3']; ?> <?php echo VARS['nearby-name-3']; ?>
+          <?php echo $vars['typeOfNearby-3']; ?> <?php echo $vars['nearby-name-3']; ?>
         </p>
         <p class="nearby-address">
-          <?php echo VARS['nearby-address-3']; ?>
+          <?php echo $vars['nearby-address-3']; ?>
         </p>
       </div>
       <hr class="normal-dash">
       <div class="nearby">
         <p class="nearby-name">
-          <?php echo VARS['typeOfNearby-4']; ?> <?php echo VARS['nearby-name-4']; ?>
+          <?php echo $vars['typeOfNearby-4']; ?> <?php echo $vars['nearby-name-4']; ?>
         </p>
         <p class="nearby-address">
-          <?php echo VARS['nearby-address-4']; ?>
+          <?php echo $vars['nearby-address-4']; ?>
         </p>
       </div>
       <hr class="normal-dash">
       <div class="nearby">
         <p class="nearby-name">
-          <?php echo VARS['typeOfNearby-5']; ?> <?php echo VARS['nearby-name-5']; ?>
+          <?php echo $vars['typeOfNearby-5']; ?> <?php echo $vars['nearby-name-5']; ?>
         </p>
         <p class="nearby-address">
-          <?php echo VARS['nearby-address-5']; ?>
+          <?php echo $vars['nearby-address-5']; ?>
         </p>
       </div>
     </div>
