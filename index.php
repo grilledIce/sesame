@@ -44,7 +44,7 @@ require(dirname(__FILE__).'/translate/vars.php');
       <div class="school">
         <div class="nameBlock">
           <p class="school-name">
-          <i class="fas fa-graduation-cap"></i> <?php echo $var['school-name-1'] ?>
+          <i class="fas fa-graduation-cap"></i> <?php echo $vars['school-name-1'] ?>
           </p>
           <div class="bubbles">
             <div class="property">
