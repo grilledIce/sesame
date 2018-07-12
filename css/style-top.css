@@ -4,7 +4,6 @@
 
 .row .top-contact {
   margin-top: 3%;
-  margin-bottom: 5%;
   margin-left: 8%;
   margin-right: 16%;
   float: left;
@@ -13,7 +12,7 @@
 }
 
 .row .top-contact p {
-  font-size: 13px;
+  font-size: 14px;
   color: #666;
 }
 
@@ -22,8 +21,8 @@
 }
 
 .row .logo img {
-  max-width: 40%;
-  margin-top: 5%;
+  max-width: 57%;
+  margin-top: 12%;
   float: right;
 }
 

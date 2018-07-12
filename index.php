@@ -1,10 +1,24 @@
 <?php 
-if($_GET['lang'] == 'EN'){
+if(strtolower($_GET['lang']) == 'en'){
   require(dirname(__FILE__).'/translate/EN.php');
 } else {
   require(dirname(__FILE__).'/translate/CN.php');
 }
-require(dirname(__FILE__).'/translate/vars.php');
+
+if(strtolower($_GET['id']) == 'aquanluna'){
+  require(dirname(__FILE__).'/translate/vars-aquanluna.php');
+
+} else if(strtolower($_GET['id']) == 'm2m') {
+  require(dirname(__FILE__).'/translate/vars-m2m.php');
+  
+} else if(strtolower($_GET['id']) == 'sugarwharf') {
+  require(dirname(__FILE__).'/translate/vars-sugarWharf.php');
+
+} else if(strtolower($_GET['id']) == 'vendome'){
+  require(dirname(__FILE__).'/translate/vars-vendome.php');
+
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -28,17 +42,17 @@ require(dirname(__FILE__).'/translate/vars.php');
   <div class="container">
     <div class="row">
       <div class="top-contact">
-        <p id="name">Name</p>
-        <p id="phone">Phone</p>
-        <p id="web">Web</p>
+        <p id="name">Sesamebooking</p>
+        <p id="phone">4169510800</p>
+        <p id="web">www.sesamebooking.com</p>
       </div>
       <div class="logo">
         <img src="/img/logo-circle.png" alt="">
       </div>
     </div>
     <div class="block">
-      <h1>2037 Waterever Street, C9A5Z0</h1>
-      <h4>Toronto, ON</h4>
+      <h1><?php echo $vars['street'] ?></h1>
+      <h4><?php echo $vars['city']?></h4>
       <h4>INTERACTIVE ADDRESS REPORT</h4>
     </div>
     <div class="schoolBlock">
@@ -46,7 +60,44 @@ require(dirname(__FILE__).'/translate/vars.php');
           <i class="fas fa-school"></i> <?php echo $lang['school-title'] ?>
         </p>
       <hr class="first-dash">
-      <div class="school">
+      <?php 
+        
+        $html = '';
+        for($x =1; $x < $vars['school-number']; $x++){
+          $schoolName = $vars['school-name-'.$x.''];
+          $schoolProperty = $lang['school-property-'.$x.''];
+          $schoolRank = $vars['school-rank-'.$x.''];
+          $schoolGrade = $vars['school-grade-'.$x.''];
+          $schoolAddress = $vars['school-address-'.$x.''];
+          $schoolDistance = $vars['school-distance-'.$x.''];
+          $html .= '
+          <div class="school" id ="school-1">
+              <div class="nameBlock">
+                <p class="school-name">
+                <i class="fas fa-graduation-cap"></i>'.$schoolName.'
+                </p>
+                <div class="bubbles">
+                  <div class="property">
+                  '.$schoolProperty.'
+                  </div>
+                  <div class="rank">
+                  '.$schoolRank.'
+                  </div>
+                </div>
+              </div>
+              <div class="school-info">
+                <p>'.$schoolGrade.'</p>
+                <p>'.$schoolAddress.'</p>
+                <p>'.$schoolDistance.'</p>
+              </div>
+          </div>
+          <hr class="normal-dash">';
+        } 
+        
+        echo $html;
+        ?>
+
+      <!-- <div class="school" id ="school-1">
         <div class="nameBlock">
           <p class="school-name">
           <i class="fas fa-graduation-cap"></i> <?php echo $vars['school-name-1'] ?>
@@ -67,7 +118,7 @@ require(dirname(__FILE__).'/translate/vars.php');
         </div>
       </div>
       <hr class="normal-dash">
-      <div class="school">
+      <div class="school" id = "school2">
         <div class="nameBlock">
           <p class="school-name">
             <i class="fas fa-graduation-cap"></i> <?php echo $vars['school-name-2'] ?>
@@ -88,7 +139,7 @@ require(dirname(__FILE__).'/translate/vars.php');
         </div>
       </div>
       <hr class="normal-dash">
-      <div class="school">
+      <div class="school" id = "school3">
         <div class="nameBlock">
           <p class="school-name">
             <i class="fas fa-graduation-cap"></i> <?php echo $vars['school-name-3'] ?>
@@ -109,7 +160,7 @@ require(dirname(__FILE__).'/translate/vars.php');
         </div>
       </div>
       <hr class="normal-dash">
-      <div class="school">
+      <div class="school" id = "school4">
         <div class="nameBlock">
           <p class="school-name">
             <i class="fas fa-graduation-cap"></i> <?php echo $vars['school-name-4'] ?>
@@ -130,7 +181,7 @@ require(dirname(__FILE__).'/translate/vars.php');
         </div>
       </div>
       <hr class="normal-dash">
-      <div class="school">
+      <div class="school" id = "school5">
         <div class="nameBlock">
           <p class="school-name">
             <i class="fas fa-graduation-cap"></i> <?php echo $vars['school-name-5'] ?>
@@ -150,6 +201,48 @@ require(dirname(__FILE__).'/translate/vars.php');
           <p><?php echo $vars['school-distance-5'] ?></p>
         </div>
       </div>
+      <hr class="normal-dash">
+      <div class="school" id ="school-6">
+        <div class="nameBlock">
+          <p class="school-name">
+          <i class="fas fa-graduation-cap"></i> <?php echo $vars['school-name-6'] ?>
+          </p>
+          <div class="bubbles">
+            <div class="property">
+            <?php echo $lang['school-property-6'] ?>
+            </div>
+            <div class="rank">
+            <?php echo $vars['school-rank-6'] ?>
+            </div>
+          </div>
+        </div>
+        <div class="school-info">
+          <p><?php echo $vars['school-grade-6'] ?></p>
+          <p><?php echo $vars['school-address-6'] ?></p>
+          <p><?php echo $vars['school-distance-6'] ?></p>
+        </div>
+      </div>
+      <hr class="normal-dash"> -->
+      <div class="school" id ="school-7">
+        <div class="nameBlock">
+          <p class="school-name">
+          <i class="fas fa-graduation-cap"></i> <?php echo $vars['school-name-'.$vars['school-number'].''] ?>
+          </p>
+          <div class="bubbles">
+            <div class="property">
+            <?php echo $lang['school-property-'.$vars['school-number'].''] ?>
+            </div>
+            <div class="rank">
+            <?php echo $vars['school-rank-'.$vars['school-number'].''] ?>
+            </div>
+          </div>
+        </div>
+        <div class="school-info">
+          <p><?php echo $vars['school-grade-'.$vars['school-number'].''] ?></p>
+          <p><?php echo $vars['school-address-'.$vars['school-number'].''] ?></p>
+          <p><?php echo $vars['school-distance-'.$vars['school-number'].''] ?></p>
+        </div>
+      </div>
     </div>
     <!-- ------------------------------------------------------------------------------------- -->
     <!-- TRANSIT -->
@@ -158,7 +251,7 @@ require(dirname(__FILE__).'/translate/vars.php');
         <i class="fas fa-subway"></i> <?php echo $lang['transit-title']; ?>
       </p>
       <hr class="first-dash">
-      <div class="transit">
+      <div class="transit"  id ="transit1">
         <p class="transit-name">
           <?php echo $vars['typeOfTransit-1']?> <?php echo $vars['transit-name-1']; ?>
         </p>
@@ -167,39 +260,12 @@ require(dirname(__FILE__).'/translate/vars.php');
         </p>
       </div>
       <hr class="normal-dash">
-      <div class="transit">
+      <div class="transit" id ="transit2">
         <p class="transit-name">
           <?php echo $vars['typeOfTransit-2']?> <?php echo $vars['transit-name-2']; ?>
         </p>
         <p class="transit-distance">
           <?php echo $vars['transit-distance-2']; ?>
-        </p>
-      </div>
-      <hr class="normal-dash">
-      <div class="transit">
-        <p class="transit-name">
-          <?php echo $vars['typeOfTransit-3']?> <?php echo $vars['transit-name-3']; ?>
-        </p>
-        <p class="transit-distance">
-          <?php echo $vars['transit-distance-3']; ?>
-        </p>
-      </div>
-      <hr class="normal-dash">
-      <div class="transit">
-        <p class="transit-name">
-          <?php echo $vars['typeOfTransit-4']?> <?php echo $vars['transit-name-4']; ?>
-        </p>
-        <p class="transit-distance">
-          <?php echo $vars['transit-distance-4']; ?>
-        </p>
-      </div>
-      <hr class="normal-dash">
-      <div class="transit">
-        <p class="transit-name">
-          <?php echo $vars['typeOfTransit-5']?> <?php echo $vars['transit-name-5']; ?>
-        </p>
-        <p class="transit-distance">
-          <?php echo $vars['transit-distance-5']; ?>
         </p>
       </div>
     </div>
@@ -210,7 +276,7 @@ require(dirname(__FILE__).'/translate/vars.php');
         <i class="fas fa-thumbs-up"></i> <?php echo $lang['nearby-title']; ?>
       </p>
       <hr class="first-dash">
-      <div class="nearby">
+      <div class="nearby" id ="nearby1">
         <p class="nearby-name">
           <?php echo $vars['typeOfNearby-1']; ?> <?php echo $vars['nearby-name-1']; ?>
         </p>
@@ -219,7 +285,7 @@ require(dirname(__FILE__).'/translate/vars.php');
         </p>
       </div>
       <hr class="normal-dash">
-      <div class="nearby">
+      <div class="nearby" id ="nearby2">
         <p class="nearby-name">
           <?php echo $vars['typeOfNearby-2']; ?> <?php echo $vars['nearby-name-2']; ?>
         </p>
@@ -228,7 +294,7 @@ require(dirname(__FILE__).'/translate/vars.php');
         </p>
       </div>
       <hr class="normal-dash">
-      <div class="nearby">
+      <div class="nearby" id ="nearby3">
         <p class="nearby-name">
           <?php echo $vars['typeOfNearby-3']; ?> <?php echo $vars['nearby-name-3']; ?>
         </p>
@@ -237,7 +303,7 @@ require(dirname(__FILE__).'/translate/vars.php');
         </p>
       </div>
       <hr class="normal-dash">
-      <div class="nearby">
+      <div class="nearby" id ="nearby4">
         <p class="nearby-name">
           <?php echo $vars['typeOfNearby-4']; ?> <?php echo $vars['nearby-name-4']; ?>
         </p>
@@ -246,7 +312,7 @@ require(dirname(__FILE__).'/translate/vars.php');
         </p>
       </div>
       <hr class="normal-dash">
-      <div class="nearby">
+      <div class="nearby" id ="nearby5">
         <p class="nearby-name">
           <?php echo $vars['typeOfNearby-5']; ?> <?php echo $vars['nearby-name-5']; ?>
         </p>
